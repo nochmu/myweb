@@ -1,0 +1,8 @@
+-- READ
+criteria;
+data = db.fetch_by(criteria);
+print(data);
+
+-- WRITE
+to_set = (criteria, new_value);
+db.set_by(to_set.criteria, to_set.new_value);
