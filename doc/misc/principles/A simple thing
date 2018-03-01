@@ -30,3 +30,13 @@ engine.handleRequest(req);
     return request;   
  }
  
+-- Router: 
+  resolve(x) {
+    return [
+      / => page(index);
+      i/info(|.txt) => hello_world;
+      /index : page(info.txt);
+    ][x]; 
+  }
+  
+  -- 
