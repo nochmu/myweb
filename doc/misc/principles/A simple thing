@@ -1,0 +1,32 @@
+# GET /info.html HTTP/1.1
+HTTP = $1; 
+request = [HTTP.request.*]
+  // => request = [
+  //      protocol         = HTTP;
+  //      protocol_version = 1.1;
+  //      method           =  GET;
+  //      path             = /info.html; 
+  //    ]
+
+
+req = [
+  path = request.path;
+]
+
+engine.handleRequest(req);
+
+--- Engine: 
+  handleRequest(req) {
+    //What is the internal representation of the request? 
+    // eg. /pages/info-page  => request: I want the Page with informations! 
+    page_id = Router.resolve(req);
+    
+    handle = Handler.handle(page_id, req); 
+    
+    render = Renderer.render(handle); 
+    /
+    // Answer the request
+    request = new Request(render, req); 
+    return request;   
+ }
+ 
