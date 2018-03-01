@@ -2,6 +2,3 @@ request -> path          // r = resolve(request); r.path
 path -> page (=route)    // p = resolve(page); p.page_id
 page -> rendering        // r = p.render(); r.toString();
 rendering => response    // rsp = Response(status = 200, body = r); 
-
-----------------
-
