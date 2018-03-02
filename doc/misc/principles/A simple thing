@@ -21,7 +21,7 @@ engine.handleRequest(req);
     // eg. /pages/info-page  => request: I want the Page with informations! 
     page_id = Router.resolve(req);
     
-    handle = Handler.handle(page_id, req); 
+    handle = Handler.handle(page_key, req); 
     
     render = Renderer.render(handle); 
     /
@@ -39,4 +39,19 @@ engine.handleRequest(req);
     ][x]; 
   }
   
-  -- 
+  -- Handler: 
+    handle(page_key, req){
+    env = [];     
+    
+    }
+    
+    
+  -- Renderer: 
+    render(env) {
+    
+    
+    
+   
+    }
+  
+ 
