@@ -1,0 +1,16 @@
+req = request [
+  path = ...;
+
+
+
+];
+
+
+rsp = response [
+  status = ...; 
+
+
+
+
+];
+
